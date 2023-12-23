@@ -164,7 +164,6 @@ class Users extends BaseController
 
     // Debug: Tambahkan pesan log
     log_message('debug', 'Jawaban Pengguna: ' . print_r($jawabanPengguna, true));
-
     foreach ($aturanKepribadian as $rule) {
         // Debug: Tambahkan pesan log
         log_message('debug', 'Analisis aturan: ' . $rule['Kondisi']);
