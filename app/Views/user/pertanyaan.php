@@ -1,3 +1,4 @@
+<?php include('include/template.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,19 +24,81 @@
         #resultMessage {
             display: none;
         }
+
+        body {
+    font-family: Arial, sans-serif;
+}
+
+h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+#jawabanForm {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.question-container {
+    display: none;
+    text-align: center;
+}
+
+.current-question {
+    display: block;
+}
+.head-judul{
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    padding: 8px 12px;
+    margin: 0 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+}
+
+button:hover {
+            background-color: #0056b3;
+        }
+
+.bawah-button{
+    text-align: center;
+    margin-left: 220px;
+}
+
+#resultMessage {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
     </style>
 </head>
 
 <body>
-
+<div class="head-judul">
     <h1>Daftar Pertanyaan</h1>
-
+    </div>
     <form action="/users/jawab" method="post" id="jawabanForm">
         <div class="question-container current-question" data-question="1">
             <h2>Pertanyaan 1</h2>
             <p><?= $pertanyaan[0]['PertanyaanText']; ?></p>
+            <br>
             <input type="radio" name="jawaban[<?= $pertanyaan[0]['IDPertanyaan']; ?>]" value="ya"> Ya
             <input type="radio" name="jawaban[<?= $pertanyaan[0]['IDPertanyaan']; ?>]" value="tidak"> Tidak
+            <br><br>
             <button type="button" onclick="previousQuestion()">Previous</button>
             <button type="button" onclick="nextQuestion()">Next</button>
         </div>
@@ -44,16 +107,18 @@
             <div class="question-container" data-question="<?= $i + 1; ?>">
                 <h2>Pertanyaan <?= $i + 1; ?></h2>
                 <p><?= $pertanyaan[$i]['PertanyaanText']; ?></p>
+                <br>
                 <input type="radio" name="jawaban[<?= $pertanyaan[$i]['IDPertanyaan']; ?>]" value="ya"> Ya
                 <input type="radio" name="jawaban[<?= $pertanyaan[$i]['IDPertanyaan']; ?>]" value="tidak"> Tidak
+                <br><br>
                 <button type="button" onclick="previousQuestion()">Previous</button>
                 <button type="button" onclick="nextQuestion()">Next</button>
             </div>
         <?php endfor; ?>
-
+    <div class="bawah-button">
         <button type="submit" id="submitBtn">Kirim Jawaban</button>
+        </div>
     </form>
-
     <div id="resultMessage">
         <h1>Anda akan mendapatkan email untuk tipe kepribadian Anda. Tunggu 5-10 menit.</h1>
     </div>

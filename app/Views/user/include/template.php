@@ -27,9 +27,7 @@
 
                 <ul class="nav-links">
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Services</a></li>
+                    <li><a href="<?= base_url('/user/pertanyaan') ?>">Tes MBTI</a></li>
                     <li><a href="<?= base_url('/user/profile') ?>">Profile</a></li>
                 </ul>
             </div>

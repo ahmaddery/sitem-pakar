@@ -22,6 +22,7 @@ $routes->get('reset_password/(:segment)', 'Auth::resetPassword/$1');
 $routes->post('auth/processResetPassword', 'Auth::processResetPassword');
 
 $routes->get('user/profile', 'UserController::profile');
+$routes->get('user/coldown', 'UserController::profile');
 $routes->get('user/edit-profile', 'UserController::editProfile');
 $routes->post('user/update-profile', 'UserController::updateProfile');
 //route untuk admin
@@ -64,6 +65,7 @@ $routes->get('admin/kepribadian/delete/(:segment)', 'Kepribadian::delete/$1');
 //read data pertanyaan di halaman users
 $routes->get('user/pertanyaan', 'users::index');
 $routes->post('/users/jawab', 'Users::jawab');
+$routes->get('/user/include/coldown', 'users::coldown');
 $routes->post('/users/simpan-aturan-kepribadian', 'Users::simpanAturanKepribadian');
 
 // read and delete data jawaban untuk halaman admin 

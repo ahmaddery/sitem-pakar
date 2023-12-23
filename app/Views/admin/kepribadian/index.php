@@ -19,6 +19,7 @@ include('includes/scripts.php');
             background-color: #4CAF50; /* Add background color */
             color: white; /* Set text color to white */
             margin-top: 20px;
+            margin-left: 20px;
         }
     </style>
 </head>

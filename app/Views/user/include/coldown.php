@@ -1,5 +1,5 @@
 
-<?php include('include/template.php'); ?>
+<?php include('template.php'); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -58,41 +58,15 @@
         a.btn:hover {
             background-color: #0056b3;
         }
-
-        a.logout{
-            display: inline-block;
-            padding: 6px 12px;
-            background-color: #007bff;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 2px;
-            transition: background-color 0.3s ease-in-out;
-            font-size: small;
-            margin-bottom: 5px;
-        }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <h1>User Profile</h1>
-        <p><strong>Username:</strong> <?= $user['username'] ?></p>
-        <p><strong>Usia:</strong> <?= $user['usia'] ?></p>
-        <p><strong>Jenis Kelamin:</strong> <?= $user['gender'] ?></p>
-        <p><strong>Email:</strong> <?= $user['email'] ?></p>
-
-        <!-- Format the created_at timestamp -->
-        <p><strong>Dibuat Pada:</strong> <?= date('d F Y H:i:s', strtotime($user['created_at'])) ?></p>
-
-        <!-- Format the updated_at timestamp -->
-        <p><strong>Diedit Pada:</strong> <?= date('d F Y H:i:s', strtotime($user['updated_at'])) ?></p>
-
-        <!-- Add the button to edit profile -->
-        <a href="<?= base_url('user/edit-profile') ?>" class="btn btn-primary">Edit Profile</a>
-        <br>
-        <br>
-        <a href="<?= base_url('auth/logout') ?>" class="logout">LogOut</a>
-        
+        <h1>Jawaban Telah dikirim</h1>
+        <p>Terimakasih <?= $user['username'] ?> telah melakukan Tes Kepribadian MBTI kepada kami</p>
+        <p>Kami telah mengirimkan hasil Tes Kepribadian Anda kedalam e-mail Anda</p>
+        <p>Mohon segera cek e-mail untuk mengetahui hasil Tes Kepribadian Anda</p>
     </div>
 </body>
 </html>

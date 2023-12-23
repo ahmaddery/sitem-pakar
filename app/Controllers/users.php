@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\PertanyaanModel;
+use App\Models\UserModel;
 use App\Models\JawabanModel;
 use App\Models\AturanModel;
 use App\Models\KepribadianModel;
@@ -142,14 +143,30 @@ class Users extends BaseController
         $hasilKepribadian = $this->analisisForwardChaining($idPengguna);
     
         if ($hasilKepribadian) {
-            return redirect()->to('user/pertanyaan')->with('success', 'Jawaban berhasil dikirim. Hasil Kepribadian: ' . $hasilKepribadian);
+            return redirect()->to('user/include/coldown')->with('success', 'Jawaban berhasil dikirim. Hasil Kepribadian: ' . $hasilKepribadian);
         } else {
-            return redirect()->to('user/pertanyaan')->with('error', 'Kepribadian tidak dapat ditentukan.');
+            return redirect()->to('user/include/coldown')->with('error', 'Kepribadian tidak dapat ditentukan.');
         }
     }
     
     
-    
+    public function coldown()
+    {
+        // Check if the user is logged in
+        $session = session();
+        if (!$session->has('user_id')) {
+            return redirect()->to('/login'); // Redirect to login page if not logged in
+        }
+
+        $userId = $session->get('user_id');
+
+        // Load the user model
+        $userModel = new UserModel();
+        $user = $userModel->getUserById($userId);
+
+        // Pass user data to the view
+        return view('/user/include/coldown', ['user' => $user]);
+    }
     
 
     private function analisisForwardChaining($idPengguna)
