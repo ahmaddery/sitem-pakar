@@ -10,7 +10,7 @@
     <!-- ===============================================-->
     <!--    Document Title-->
     <!-- ===============================================-->
-    <title>SISTEM PAKAR ANALISIS KEPRIBADIAN deri love septi</title>
+    <title>SISTEM PAKAR ANALISIS KEPRIBADIAN </title>
 
 
     <!-- ===============================================-->
@@ -44,12 +44,10 @@
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"> </span></button>
           <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base">
-              <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="#about">About Us</a></li>
-              <li class="nav-item px-2"><a class="nav-link" href="#departments">Departments</a></li>
-              <li class="nav-item px-2"><a class="nav-link" href="#findUs">Membership</a></li>
-              <li class="nav-item px-2"><a class="nav-link" href="#findUs">Help </a></li>
-              <li class="nav-item px-2"><a class="nav-link" href="#findUs">Contact</a></li>
-            </ul><a class="btn btn-sm btn-outline-primary rounded-pill order-1 order-lg-0 ms-lg-4" href="<?= base_url('login') ?>">Login</a>
+              <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="#about">Tentang Kami</a></li>
+              <li class="nav-item px-2"><a class="nav-link" href="#departments">Test MBTI</a></li>
+              <li class="nav-item px-2"><a class="nav-link" href="#findUs">Kontak</a></li>
+            </ul><a class="btn btn-sm btn-outline-primary rounded-pill order-1 order-lg-0 ms-lg-4" href="<?= base_url('login') ?>">Masuk</a>
           </div>
         </div>
       </nav>
@@ -63,7 +61,7 @@
             <div class="col-md-5 col-xl-6 col-xxl-7 order-0 order-md-1 text-end"><img class="pt-7 pt-md-0 w-100" src="assets/img/gallery/hero.png" alt="hero-header" /></div>
             <div class="col-md-75 col-xl-6 col-xxl-5 text-md-start text-center py-6">
               <h1 class="fw-light font-base fs-6 fs-xxl-7">Analisi Kepribadian<strong> Diri</strong> Dengan Metode<br />Forward<strong> Chaining</strong></h1>
-              <p class="fs-1 mb-5">You can get the care you need 24/7 – be it online or in <br />person. You will be treated by caring specialist doctors. </p><a class="btn btn-lg btn-primary rounded-pill" href="<?= base_url('register') ?>" role="button">Daftar Sekarang</a>
+              <p class="fs-1 mb-5">Temukan keunikan dan potensi dirimu melalui tes kepribadian kami yang inovatif <br />Dengan uji kepribadian kami, kita akan menjelajahi lapisan terdalam dari siapa kamu sebenarnya. </p><a class="btn btn-lg btn-primary rounded-pill" href="<?= base_url('register') ?>" role="button">Daftar</a>
             </div>
           </div>
         </div>
@@ -151,23 +149,6 @@
       <!-- ============================================-->
 
 
-      <section class="bg-secondary">
-        <div class="bg-holder" style="background-image:url(assets/img/gallery/bg-eye-care.png);background-position:center;background-size:contain;">
-        </div>
-        <!--/.bg-holder-->
-
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-md-5 col-xxl-6"><img class="img-fluid" src="assets/img/gallery/eye-care.png" alt="..." /></div>
-            <div class="col-md-7 col-xxl-6 text-center text-md-start">
-              <h2 class="fw-bold text-light mb-4 mt-4 mt-lg-0">Eye Care with Top Professionals<br class="d-none d-sm-block" />and In Budget.</h2>
-              <p class="text-light">We've built a healthcare system that puts your needs first.<br class="d-none d-sm-block" />For us, there is nothing more important than the health of <br class="d-none d-sm-block" />you and your loved ones. </p>
-              <div class="py-3"><a class="btn btn-lg btn-light rounded-pill" href="#!" role="button">Learn more </a></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
 
       <!-- ============================================-->
       <!-- <section> begin ============================-->
@@ -176,11 +157,9 @@
         <div class="container">
           <div class="row">
             <div class="col-12 py-3">
-              <div class="bg-holder bg-size" style="background-image:url(assets/img/gallery/about-us.png);background-position:top center;background-size:contain;">
-              </div>
               <!--/.bg-holder-->
 
-              <h1 class="text-center">ABOUT US</h1>
+              <h1 class="text-center">Tentang Kami</h1>
             </div>
           </div>
         </div>
@@ -201,9 +180,9 @@
             <div class="col-md-6 order-lg-1 mb-5 mb-lg-0"><img class="fit-cover rounded-circle w-100" src="assets/img/gallery/health-care.png" alt="..." /></div>
             <div class="col-md-6 text-center text-md-start">
               <h2 class="fw-bold mb-4">We are developing a healthcare <br class="d-none d-sm-block" />system around you</h2>
-              <p>We think that everyone should have easy access to excellent <br class="d-none d-sm-block" />healthcare. Our aim is to make the procedure as simple as <br class="d-none d-sm-block" />possible for our patients and to offer treatment no matter<br class="d-none d-sm-block" />where they are — in person or at their convenience. </p>
+              <p>Menyediakan tes kepribadian yang dirancang secara cermat untuk memberikan wawasan mendalam tentang aspek-aspek unik dari kepribadian Anda. <br class="d-none d-sm-block" />Dengan pertanyaan yang cerdas dan analisis yang akurat, kami membantu Anda menemukan potensi, mengatasi tantangan, dan merayakan keunikan Anda.</p>
               <div class="py-3">
-                <button class="btn btn-lg btn-outline-primary rounded-pill" type="submit">Learn more </button>
+                <button class="btn btn-lg btn-outline-primary rounded-pill" type="submit">Baca Selengkapnya </button>
               </div>
             </div>
           </div>
@@ -211,174 +190,7 @@
       </section>
 
 
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-      <section class="pb-0">
-
-        <div class="container">
-          <div class="row">
-            <div class="col-12 py-3">
-              <div class="bg-holder bg-size" style="background-image:url(assets/img/gallery/doctors-us.png);background-position:top center;background-size:contain;">
-              </div>
-              <!--/.bg-holder-->
-
-              <h1 class="text-center">OUR DOCTORS</h1>
-            </div>
-          </div>
-        </div>
-        <!-- end of .container-->
-
-      </section>
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
-
-
-      <section class="py-5">
-        <div class="bg-holder bg-size" style="background-image:url(assets/img/gallery/doctors-bg.png);background-position:top center;background-size:contain;">
-        </div>
-        <!--/.bg-holder-->
-
-        <div class="container">
-          <div class="row flex-center">
-            <div class="col-xl-10 px-0">
-              <div class="carousel slide" id="carouselExampleDark" data-bs-ride="carousel"><a class="carousel-control-prev carousel-icon z-index-2" href="#carouselExampleDark" role="button" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></a><a class="carousel-control-next carousel-icon z-index-2" href="#carouselExampleDark" role="button" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></a>
-                <div class="carousel-inner">
-                  <div class="carousel-item active" data-bs-interval="10000">
-                    <div class="row h-100 m-lg-7 mx-3 mt-6 mx-md-4 my-md-7">
-                      <div class="col-md-4 mb-8 mb-md-0">
-                        <div class="card card-span h-100 shadow">
-                          <div class="card-body d-flex flex-column flex-center py-5"><img src="assets/img/gallery/anita.png" width="128" alt="..." />
-                            <h5 class="mt-3">Anita Deshai</h5>
-                            <p class="mb-0 fs-xxl-1">Pediatrics, Gochi Medicine</p>
-                            <p class="text-600 mb-0">Florida, United States</p>
-                            <p class="text-600 mb-4">10 years experience</p>
-                            <div class="text-center">
-                              <button class="btn btn-outline-secondary rounded-pill" type="submit">View Profile</button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-4 mb-8 mb-md-0">
-                        <div class="card card-span h-100 shadow">
-                          <div class="card-body d-flex flex-column flex-center py-5"><img src="assets/img/gallery/jane.png" width="128" alt="..." />
-                            <h5 class="mt-3">Jane Flakis</h5>
-                            <p class="mb-0 fs-xxl-1">Gynaecology, Abenka Care</p>
-                            <p class="text-600 mb-0">Melbourne, Australia</p>
-                            <p class="text-600 mb-4">12 years experience</p>
-                            <div class="text-center">
-                              <button class="btn btn-outline-secondary rounded-pill" type="submit">View Profile</button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-4 mb-8 mb-md-0">
-                        <div class="card card-span h-100 shadow">
-                          <div class="card-body d-flex flex-column flex-center py-5"><img src="assets/img/gallery/leo-mario.png" width="128" alt="..." />
-                            <h5 class="mt-3">Leo Mario</h5>
-                            <p class="mb-0 fs-xxl-1">Physiotherapy, FitCare</p>
-                            <p class="text-600 mb-0">London, England</p>
-                            <p class="text-600 mb-4">25 years experience</p>
-                            <div class="text-center">
-                              <button class="btn btn-secondary hover-top rounded-pill border-0" type="submit">View Profile</button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item" data-bs-interval="2000">
-                    <div class="row h-100 m-lg-7 mx-3 mt-6 mx-md-4 my-md-7">
-                      <div class="col-md-4 mb-8 mb-md-0">
-                        <div class="card card-span h-100 shadow">
-                          <div class="card-body d-flex flex-column flex-center py-5"><img src="assets/img/gallery/anita.png" width="128" alt="..." />
-                            <h5 class="mt-3">Anita Deshai</h5>
-                            <p class="mb-0 fs-xxl-1">Pediatrics, Gochi Medicine</p>
-                            <p class="text-600 mb-0">Florida, United States</p>
-                            <p class="text-600 mb-4">10 years experience</p>
-                            <div class="text-center">
-                              <button class="btn btn-outline-secondary rounded-pill" type="submit">View Profile</button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-4 mb-8 mb-md-0">
-                        <div class="card card-span h-100 shadow">
-                          <div class="card-body d-flex flex-column flex-center py-5"><img src="assets/img/gallery/jane.png" width="128" alt="..." />
-                            <h5 class="mt-3">Jane Flakis</h5>
-                            <p class="mb-0 fs-xxl-1">Gynaecology, Abenka Care</p>
-                            <p class="text-600 mb-0">Melbourne, Australia</p>
-                            <p class="text-600 mb-4">12 years experience</p>
-                            <div class="text-center">
-                              <button class="btn btn-outline-secondary rounded-pill" type="submit">View Profile</button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-4 mb-8 mb-md-0">
-                        <div class="card card-span h-100 shadow">
-                          <div class="card-body d-flex flex-column flex-center py-5"><img src="assets/img/gallery/leo-mario.png" width="128" alt="..." />
-                            <h5 class="mt-3">Leo Mario</h5>
-                            <p class="mb-0 fs-xxl-1">Physiotherapy, FitCare</p>
-                            <p class="text-600 mb-0">London, England</p>
-                            <p class="text-600 mb-4">25 years experience</p>
-                            <div class="text-center">
-                              <button class="btn btn-secondary hover-top rounded-pill border-0" type="submit">View Profile</button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="row h-100 m-lg-7 mx-3 mt-6 mx-md-4 my-md-7">
-                      <div class="col-md-4 mb-8 mb-md-0">
-                        <div class="card card-span h-100 shadow">
-                          <div class="card-body d-flex flex-column flex-center py-5"><img src="assets/img/gallery/anita.png" width="128" alt="..." />
-                            <h5 class="mt-3">Anita Deshai</h5>
-                            <p class="mb-0 fs-xxl-1">Pediatrics, Gochi Medicine</p>
-                            <p class="text-600 mb-0">Florida, United States</p>
-                            <p class="text-600 mb-4">10 years experience</p>
-                            <div class="text-center">
-                              <button class="btn btn-outline-secondary rounded-pill" type="submit">View Profile</button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-4 mb-8 mb-md-0">
-                        <div class="card card-span h-100 shadow">
-                          <div class="card-body d-flex flex-column flex-center py-5"><img src="assets/img/gallery/jane.png" width="128" alt="..." />
-                            <h5 class="mt-3">Jane Flakis</h5>
-                            <p class="mb-0 fs-xxl-1">Gynaecology, Abenka Care</p>
-                            <p class="text-600 mb-0">Melbourne, Australia</p>
-                            <p class="text-600 mb-4">12 years experience</p>
-                            <div class="text-center">
-                              <button class="btn btn-outline-secondary rounded-pill" type="submit">View Profile</button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-4 mb-8 mb-md-0">
-                        <div class="card card-span h-100 shadow">
-                          <div class="card-body d-flex flex-column flex-center py-5"><img src="assets/img/gallery/leo-mario.png" width="128" alt="..." />
-                            <h5 class="mt-3">Leo Mario</h5>
-                            <p class="mb-0 fs-xxl-1">Physiotherapy, FitCare</p>
-                            <p class="text-600 mb-0">London, England</p>
-                            <p class="text-600 mb-4">25 years experience</p>
-                            <div class="text-center">
-                              <button class="btn btn-secondary hover-top rounded-pill border-0" type="submit">View Profile</button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
+    
 
       <!-- ============================================-->
       <!-- <section> begin ============================-->
@@ -391,7 +203,7 @@
               </div>
               <!--/.bg-holder-->
 
-              <h1 class="text-center">PEOPLE WHO LOVE US</h1>
+              <h1 class="text-center">Testimoni</h1>
             </div>
           </div>
         </div>
@@ -414,13 +226,13 @@
                 <div class="carousel-item active" data-bs-interval="10000">
                   <div class="row h-100">
                     <div class="col-sm-3 text-center"><img src="assets/img/gallery/people-who-loves.png" width="100" alt="" />
-                      <h5 class="mt-3 fw-medium text-secondary">Edward Newgate</h5>
-                      <p class="fw-normal mb-0">Founder Circle</p>
+                      <h5 class="mt-3 fw-medium text-secondary">Aprilia Rosiana</h5>
+                      <p class="fw-normal mb-0">Komunitas</p>
                     </div>
                     <div class="col-sm-9 text-center text-sm-start pt-3 pt-sm-0">
-                      <h2>Fantastic Response!</h2>
+                      <h2>Respon Bagus!</h2>
                       <div class="my-2"><i class="fas fa-star me-2"></i><i class="fas fa-star me-2"></i><i class="fas fa-star me-2"></i><i class="fas fa-star-half-alt me-2"></i><i class="far fa-star"></i></div>
-                      <p>This medical and health care facility distinguishes itself from the competition by providing technologically advanced medical and health care. A mobile app and a website are available via which you can easily schedule appointments, get online consultations, and see physicians, who will assist you through the whole procedure. And all of the prescriptions, medications, and other services they offer are 100% genuine, medically verified, and proved. I believe that the Livedoc staff is doing an outstanding job. Highly recommended their health care services.</p>
+                      <p>Saya ingin berbagi pengalaman saya dengan menggunakan tes kepribadian di situs web ini. Awalnya, saya skeptis, tetapi setelah mencoba, saya sangat terkesan dengan akurasi dan kedalamannya. Tesnya tidak hanya memberikan wawasan tentang kepribadian saya, tetapi juga memberikan saran dan panduan yang sangat berguna untuk perkembangan pribadi saya. Saya merasa lebih mengenal diri sendiri dan memiliki landasan yang lebih kuat untuk mengambil keputusan. Terima kasih banyak!</p>
                     </div>
                   </div>
                 </div>
@@ -473,11 +285,9 @@
         <div class="container">
           <div class="row">
             <div class="col-12 py-3">
-              <div class="bg-holder bg-size" style="background-image:url(assets/img/gallery/people.png);background-position:top center;background-size:contain;">
-              </div>
               <!--/.bg-holder-->
 
-              <h1 class="text-center">APPOINTMENT</h1>
+              <h1 class="text-center">Konsultasi</h1>
             </div>
           </div>
         </div>
@@ -499,20 +309,19 @@
             <div class="col-lg-6 z-index-2">
               <form class="row g-3">
                 <div class="col-md-6">
-                  <label class="visually-hidden" for="inputName">Name</label>
-                  <input class="form-control form-livedoc-control" id="inputName" type="text" placeholder="Name" />
+                  <label class="visually-hidden" for="inputName">Nama</label>
+                  <input class="form-control form-livedoc-control" id="inputName" type="text" placeholder="Nama" />
                 </div>
                 <div class="col-md-6">
-                  <label class="visually-hidden" for="inputPhone">Phone</label>
-                  <input class="form-control form-livedoc-control" id="inputPhone" type="text" placeholder="Phone" />
+                  <label class="visually-hidden" for="inputPhone">No. Handphone</label>
+                  <input class="form-control form-livedoc-control" id="inputPhone" type="text" placeholder="No. Handphone" />
                 </div>
                 <div class="col-md-6">
-                  <label class="form-label visually-hidden" for="inputCategory">Category</label>
+                  <label class="form-label visually-hidden" for="inputCategory">Kategori</label>
                   <select class="form-select" id="inputCategory">
-                    <option selected="selected">Category</option>
-                    <option> Category One</option>
-                    <option> Category Two</option>
-                    <option> Category Three</option>
+                    <option selected="selected">Kategori</option>
+                    <option> Ekstrovert</option>
+                    <option> Introvert</option>
                   </select>
                 </div>
                 <div class="col-md-6">
@@ -520,12 +329,12 @@
                   <input class="form-control form-livedoc-control" id="inputEmail" type="email" placeholder="Email" />
                 </div>
                 <div class="col-md-12">
-                  <label class="form-label visually-hidden" for="validationTextarea">Message</label>
-                  <textarea class="form-control form-livedoc-control" id="validationTextarea" placeholder="Message" style="height: 250px;" required="required"></textarea>
+                  <label class="form-label visually-hidden" for="validationTextarea">Pesan</label>
+                  <textarea class="form-control form-livedoc-control" id="validationTextarea" placeholder="Pesan" style="height: 250px;" required="required"></textarea>
                 </div>
                 <div class="col-12">
                   <div class="d-grid">
-                    <button class="btn btn-primary rounded-pill" type="submit">Sign in</button>
+                    <button class="btn btn-primary rounded-pill" type="submit">Kirim</button>
                   </div>
                 </div>
               </form>
@@ -546,72 +355,7 @@
               </div>
               <!--/.bg-holder-->
 
-              <h1 class="text-center">RECENT BLOGPOSTS</h1>
-            </div>
-          </div>
-        </div>
-        <!-- end of .container-->
-
-      </section>
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
-
-
-      <section>
-        <div class="bg-holder bg-size" style="background-image:url(assets/img/gallery/dot-bg.png);background-position:top left;background-size:auto;">
-        </div>
-        <!--/.bg-holder-->
-
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-6 col-lg-3 mb-4">
-              <div class="card h-100 shadow card-span rounded-3"><img class="card-img-top rounded-top-3" src="assets/img/gallery/covid-19.png" alt="news" />
-                <div class="card-body"><span class="fs--1 text-primary me-3">Health</span>
-                  <svg class="bi bi-calendar2 me-2" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
-                    <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z"></path>
-                    <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z"> </path>
-                  </svg><span class="fs--1 text-900">Nov 21, 2021</span><span class="fs--1"></span>
-                  <h5 class="font-base fs-lg-0 fs-xl-1 my-3">COVID-19: The Most Up-to-Date Information</h5><a class="stretched-link" href="#!">read full article</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-3 mb-4">
-              <div class="card h-100 shadow card-span rounded-3"><img class="card-img-top rounded-top-3" src="assets/img/gallery/laboratories.png" alt="news" />
-                <div class="card-body"><span class="fs--1 text-primary me-3">Lifestyle</span>
-                  <svg class="bi bi-calendar2 me-2" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
-                    <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z"></path>
-                    <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z"> </path>
-                  </svg><span class="fs--1 text-900">Nov 25, 2021</span><span class="fs--1"></span>
-                  <h5 class="font-base fs-lg-0 fs-xl-1 my-3">Importance of Accreditation for Laboratories</h5><a class="stretched-link" href="#!">read full article</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-3 mb-4">
-              <div class="card h-100 shadow card-span rounded-3"><img class="card-img-top rounded-top-3" src="assets/img/gallery/nicotine.png" alt="news" />
-                <div class="card-body"><span class="fs--1 text-primary me-3">Health</span>
-                  <svg class="bi bi-calendar2 me-2" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
-                    <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z"></path>
-                    <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z"> </path>
-                  </svg><span class="fs--1 text-900">Nov 28, 2021</span><span class="fs--1"></span>
-                  <h5 class="font-base fs-lg-0 fs-xl-1 my-3">The dangers of nicotine are addressed in depth</h5><a class="stretched-link" href="#!">read full article</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-3 mb-4">
-              <div class="card h-100 shadow card-span rounded-3"><img class="card-img-top rounded-top-3" src="assets/img/gallery/treatment.png" alt="news" />
-                <div class="card-body"><span class="fs--1 text-primary me-3">Health</span>
-                  <svg class="bi bi-calendar2 me-2" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
-                    <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z"></path>
-                    <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z"> </path>
-                  </svg><span class="fs--1 text-900">Nov 30, 2021</span><span class="fs--1"></span>
-                  <h5 class="font-base fs-lg-0 fs-xl-1 my-3">Treatment of patients with diabetes during COVID-19</h5><a class="stretched-link" href="#!">read full article</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="bg-primary">
+                    <section class="bg-primary">
         <div class="bg-holder bg-size" style="background-image:url(assets/img/gallery/cta-bg.png);background-position:center right;margin-top:-8.125rem;background-size:contain;">
         </div>
         <!--/.bg-holder-->
