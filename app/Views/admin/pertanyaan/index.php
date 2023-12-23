@@ -11,16 +11,54 @@ include('includes/scripts.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daftar Pertanyaan</title>
     <style>
-        /* Add a border to the "Tambah Kepribadian" button */
-        .add-button {
-            border: 1px solid #000; /* You can adjust the border properties as needed */
-            padding: 5px 10px; /* Add some padding for better appearance */
-            text-decoration: none; /* Remove default link underline */
-            display: inline-block; /* Make it behave like a block element */
-            background-color: #4CAF50; /* Add background color */
-            color: white; /* Set text color to white */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
             margin-top: 20px;
             margin-left: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        .add-button {
+            border: 1px solid #4CAF50;
+            padding: 10px 15px;
+            text-decoration: none;
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        .add-button:hover {
+            background-color: #45a049;
         }
     </style>
 </head>
@@ -28,7 +66,7 @@ include('includes/scripts.php');
 
     <h1>Daftar Pertanyaan</h1>
 
-    <table border="1">
+    <table>
         <thead>
             <tr>
                 <th>ID Pertanyaan</th>
@@ -46,8 +84,8 @@ include('includes/scripts.php');
                     <td><?= $item['Kategori']; ?></td>
                     <td><?= $item['Bobot']; ?></td>
                     <td>
-                        <a href="/admin/pertanyaan/form_edit/<?= $item['IDPertanyaan']; ?>">Edit</a>
-                        <a href="/admin/pertanyaan/delete/<?= $item['IDPertanyaan']; ?>">Hapus</a>
+                        <a href="/admin/pertanyaan/form_edit/<?= $item['IDPertanyaan']; ?>" class="edit-link">Edit</a>
+                        <a href="/admin/pertanyaan/delete/<?= $item['IDPertanyaan']; ?>" class="delete-link">Hapus</a>
                     </td>
                 </tr>
             <?php endforeach; ?>
