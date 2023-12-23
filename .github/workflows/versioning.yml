@@ -1,0 +1,30 @@
+name: Versioning
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  versioning:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Get current version
+        id: version
+        run: echo "VERSION=$(cat VERSION)"
+
+      - name: Bump version
+        run: |
+          echo "${{ steps.version.outputs.VERSION }}+1" > VERSION
+
+      - name: Commit changes
+        run: |
+          git add VERSION
+          git commit -m "Bump version to ${{ steps.version.outputs.VERSION }}"
+
+      - name: Push changes
+        run: |
+          git push
