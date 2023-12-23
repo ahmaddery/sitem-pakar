@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login: Solusi Web & Profesional</title>
+    <title>Login:Kepribadian Diri</title>
     <link rel="icon" href="<?= base_url('images/fevicon.png'); ?>" type="image/gif" />
-    <link rel="stylesheet" href="<?= base_url('bootstrap-5.3.2-dist/css/bootstrap.min.css') ?>">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.2/css/bootstrap.min.css">
 </head>
 <style>
     body {
@@ -27,14 +27,15 @@
 }
 
 .logo img {
-    width: 150px;
-    height: 150px;
-    margin-bottom: 20px;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 2px;
 }
 
 .name {
     font-size: 24px;
     font-weight: bold;
+    color:darkturquoise;
 }
 
 .error-message {
@@ -56,7 +57,7 @@
 .btn {
     width: 100%;
     padding: 10px;
-    background-color: #4CAF50;
+    background-color:turquoise;
     color: white;
     border: none;
     border-radius: 5px;
@@ -64,7 +65,7 @@
 }
 
 .btn:hover {
-    background-color: #45a049;
+    background-color:cadetblue;
 }
 
 .fs-6 {
@@ -73,7 +74,7 @@
 
 .fs-6 a {
     text-decoration: none;
-    color: #4CAF50;
+    color: cadetblue;
 }
 
 .fs-6 a:hover {
@@ -84,7 +85,7 @@
 <body>
     <div class="wrapper">
         <div class="logo">
-        <img src="<?= base_url('images/fevicon.png') ?>" alt="">
+        <img src="<?= base_url('assets/img/gallery/logo-mbti2.png') ?>" alt="">
 
         </div>
         <div class="text-center mt-4 name">
@@ -114,8 +115,8 @@
         </div>
     </div>
     
-
-    <script src="<?= base_url('bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js') ?>"></script>
-
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.2/js/bootstrap.min.js"></script>
 </body>
 </html>
