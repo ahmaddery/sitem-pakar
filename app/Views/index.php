@@ -10,7 +10,7 @@
     <!-- ===============================================-->
     <!--    Document Title-->
     <!-- ===============================================-->
-    <title>SISTEM PAKAR ANALISIS KEPRIBADIAN test</title>
+    <title>SISTEM PAKAR ANALISIS KEPRIBADIAN deri love septi</title>
 
 
     <!-- ===============================================-->
