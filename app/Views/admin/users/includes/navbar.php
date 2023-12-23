@@ -56,7 +56,11 @@
     <span>kepribadian</span></a>
 </li>
 
-
+<li class="nav-item">
+  <a class="nav-link" href="<?= base_url('admin/jawaban') ?>">
+    <i class="fas fa-fw fa-chart-area"></i>
+    <span>Respon Pengguna</span></a>
+</li>
 
 <!-- Nav Item - Utilities Collapse Menu -->
 <li class="nav-item">
