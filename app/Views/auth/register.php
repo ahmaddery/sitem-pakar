@@ -27,14 +27,16 @@
 }
 
 .logo img {
-    width: 150px;
-    height: 150px;
-    margin-bottom: 20px;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 2px;
 }
 
 .name {
     font-size: 24px;
     font-weight: bold;
+    color:darkturquoise;
+    margin-bottom: 20px;
 }
 
 .error-message {
@@ -56,7 +58,7 @@
 .btn {
     width: 100%;
     padding: 10px;
-    background-color: #4CAF50;
+    background-color:turquoise;
     color: white;
     border: none;
     border-radius: 5px;
@@ -64,7 +66,7 @@
 }
 
 .btn:hover {
-    background-color: #45a049;
+    background-color:cadetblue;
 }
 
 .fs-6 {
@@ -73,7 +75,7 @@
 
 .fs-6 a {
     text-decoration: none;
-    color: #4CAF50;
+    color: cadetblue;
 }
 
 .fs-6 a:hover {
@@ -84,7 +86,7 @@
 <body>
     <div class="wrapper">
         <div class="logo">
-            <img src="<?= base_url('images/fevicon.png'); ?>" alt="">
+            <img src="<?= base_url('assets/img/gallery/logo-mbti2.png'); ?>" alt="">
         </div>
         <div class="text-center mt-4 name">
             Register

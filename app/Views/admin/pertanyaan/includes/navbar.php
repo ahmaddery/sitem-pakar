@@ -6,7 +6,7 @@
   <div class="sidebar-brand-icon rotate-n-15">
     <i class="fas fa-laugh-wink"></i>
   </div>
-  <div class="sidebar-brand-text mx-3">Undanganku <sup>DAshboard</sup></div>
+  <div class="sidebar-brand-text mx-3">MBTI Test<sup>Dashboard</sup></div>
 </a>
 
 <!-- Divider -->
@@ -53,7 +53,7 @@
 <li class="nav-item">
   <a class="nav-link" href="<?= base_url('admin/kepribadian') ?>">
     <i class="fas fa-fw fa-chart-area"></i>
-    <span>kepribadian</span></a>
+    <span>Kepribadian</span></a>
 </li>
 
 <li class="nav-item">
