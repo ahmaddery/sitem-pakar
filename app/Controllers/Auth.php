@@ -31,17 +31,19 @@ class Auth extends Controller
                 // Login berhasil, lakukan sesuatu seperti menyimpan sesi
                 $session = session();
                 $session->set('user_id', $user['id']);
+                $session->set('user_email', $user['email']); // Store the user's email in the session
     
                 // Arahkan pengguna ke halaman /user setelah berhasil login
                 return redirect()->to(base_url('/user/profile'));
             } else {
                 // Login gagal, tampilkan pesan kesalahan
-                session()->setFlashdata('error', 'Login failed. Please check your email and password.');
+                session()->setFlashdata('error', 'Login gagal. Silahkan periksa  email dan password anda kembali.');
             }
         }
     
         return view('auth/login');
     }
+    
     
 
     public function register()

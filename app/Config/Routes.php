@@ -65,3 +65,9 @@ $routes->get('admin/kepribadian/delete/(:segment)', 'Kepribadian::delete/$1');
 $routes->get('user/pertanyaan', 'users::index');
 $routes->post('/users/jawab', 'Users::jawab');
 $routes->post('/users/simpan-aturan-kepribadian', 'Users::simpanAturanKepribadian');
+
+// read and delete data jawaban untuk halaman admin 
+$routes->get('/admin/jawaban', 'AdminJawaban::index');
+$routes->get('/admin/jawaban/(:num)', 'AdminJawaban::index/$1');
+$routes->get('/admin/jawaban/delete/(:num)', 'AdminJawaban::delete/$1');
+

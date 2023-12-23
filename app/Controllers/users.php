@@ -7,8 +7,6 @@ use App\Models\JawabanModel;
 use App\Models\AturanModel;
 use App\Models\KepribadianModel;
 use App\Models\AturanKepribadianModel;
-use App\Models\UserModel;
-
 
 class Users extends BaseController
 {
@@ -28,101 +26,131 @@ class Users extends BaseController
     }
 
     public function jawab()
-{
-    $session = session();
-    $userId = $session->get('user_id');
-
-    if (empty($userId)) {
-        return redirect()->to('/login')->with('error', 'Anda harus login untuk menjawab pertanyaan.');
-    }
-
-    $jawabanData = $this->request->getPost('jawaban');
-
-    if (empty($jawabanData)) {
-        return redirect()->to('users/pertanyaan')->with('error', 'Pilih setidaknya satu jawaban.');
-    }
-
-    $idPengguna = $userId;
-    $jawabanModel = new JawabanModel();
-    $aturanModel = new AturanModel();
-
-    foreach ($jawabanData as $idPertanyaan => $jawaban) {
-        $data = [
-            'IDPengguna' => $idPengguna,
-            'IDPertanyaan' => (int) $idPertanyaan,
-            'JawabanPengguna' => $jawaban,
-            'WaktuJawaban' => date('Y-m-d H:i:s'),
-        ];
-
-        $jawabanModel->insert($data);
-    }
-
-    $hasilKepribadian = $this->analisisForwardChaining($idPengguna);
-
-    if ($hasilKepribadian) {
-        // Kirim email dengan soal dan jawaban
-        $this->kirimEmailSoalJawaban($idPengguna);
-
-        return redirect()->to('user/pertanyaan')->with('success', 'Jawaban berhasil dikirim. Hasil Kepribadian: ' . $hasilKepribadian);
-    } else {
-        return redirect()->to('user/pertanyaan')->with('error', 'Kepribadian tidak dapat ditentukan.');
-    }
-}
-
-private function kirimEmailSoalJawaban($idPengguna)
-{
-    $userModel = new \App\Models\UserModel();
-    $email = $userModel->getEmailById($idPengguna);
-
-    // Periksa apakah email pengguna ditemukan
-    if (!$email) {
-        log_message('error', 'Email pengguna tidak ditemukan.');
-        return;
-    }
-
-    $subject = 'Jawaban Anda';
-    $message = 'Berikut adalah jawaban Anda:';
-
-    $jawabanModel = new JawabanModel();
-    $jawabanPengguna = $jawabanModel->getJawabanByPengguna($idPengguna);
-
-    // Periksa apakah ada jawaban pengguna
-    if (empty($jawabanPengguna)) {
-        log_message('error', 'Tidak ada jawaban pengguna yang ditemukan.');
-        return;
-    }
-
-    foreach ($jawabanPengguna as $tipePertanyaan => $jawabanUser) {
-        $pertanyaanModel = new PertanyaanModel();
-        $pertanyaan = $pertanyaanModel->find($tipePertanyaan);
-
-        // Periksa apakah pertanyaan ditemukan
-        if (!$pertanyaan) {
-            log_message('error', 'Pertanyaan dengan ID ' . $tipePertanyaan . ' tidak ditemukan.');
-            continue; // Lanjutkan ke pertanyaan berikutnya jika pertanyaan tidak ditemukan
+    {
+        $session = session();
+        $userId = $session->get('user_id');
+        $userEmail = $session->get('user_email');
+    
+        if (empty($userId)) {
+            return redirect()->to('/login')->with('error', 'Anda harus login untuk menjawab pertanyaan.');
         }
-
-        $message .= "\n\nPertanyaan: " . $pertanyaan['PertanyaanText'];
-        $message .= "\nJawaban Anda: " . $jawabanUser;
+    
+        $jawabanData = $this->request->getPost('jawaban');
+    
+        if (empty($jawabanData)) {
+            return redirect()->to('/pertanyaan')->with('error', 'Pilih setidaknya satu jawaban.');
+        }
+    
+        $idPengguna = $userId;
+        $jawabanModel = new JawabanModel();
+        $pertanyaanModel = new PertanyaanModel();
+        $aturanModel = new AturanModel();
+    
+        // Email Configuration
+        $emailService = service('email');
+        $emailService->setTo($userEmail);
+        $emailService->setFrom('admin@ahmadderi.my.id', 'Respon jawaban Kepribadian');
+        $emailService->setSubject('Jawaban Pertanyaan');
+    
+        // Email Message
+        $emailMessage = '<!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jawaban Pertanyaan</title>
+        <style>
+            body {
+                font-family: \'Arial\', sans-serif;
+                background-color: #f4f4f4;
+                margin: 0;
+                padding: 0;
+            }
+    
+            .container {
+                max-width: 600px;
+                margin: 20px auto;
+                background-color: #ffffff;
+                padding: 20px;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+    
+            h1 {
+                color: #333333;
+            }
+    
+            p {
+                color: #555555;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div class="container">
+            <h1>Jawaban Pertanyaan Anda</h1>
+            <p>Berikut adalah jawaban Anda:</p>';
+    
+        // Database Transaction
+        $db = \Config\Database::connect();
+        $db->transBegin();
+    
+        try {
+            foreach ($jawabanData as $idPertanyaan => $jawaban) {
+                $pertanyaan = $pertanyaanModel->find($idPertanyaan);
+                $data = [
+                    'IDPengguna' => $idPengguna,
+                    'IDPertanyaan' => (int) $idPertanyaan,
+                    'JawabanPengguna' => $jawaban,
+                    'WaktuJawaban' => date('Y-m-d H:i:s'),
+                ];
+                
+                // Insert data into the database
+                $jawabanModel->insert($data);
+    
+                // Append question and answer to the email message
+                $emailMessage .= "<p><strong>Pertanyaan:</strong> {$pertanyaan['PertanyaanText']}</p>";
+                $emailMessage .= "<p><strong>Jawaban:</strong> $jawaban</p>";
+                $emailMessage .= '<hr>';
+            }
+    
+            // Commit the transaction
+            $db->transCommit();
+        } catch (\Exception $e) {
+            // Rollback the transaction on error
+            $db->transRollback();
+            
+            // Log or display the error message
+            log_message('error', 'Error inserting data into the database: ' . $e->getMessage());
+    
+            return redirect()->to('user/pertanyaan')->with('error', 'Terjadi kesalahan. Silakan coba lagi.');
+        }
+    
+        $emailMessage .= '<p>Terima kasih atas partisipasi Anda!</p>
+        </div>
+    </body>
+    
+    </html>';
+    
+        // Set email message
+        $emailService->setMessage($emailMessage);
+    
+        // Send the email
+        $emailService->send();
+    
+        $hasilKepribadian = $this->analisisForwardChaining($idPengguna);
+    
+        if ($hasilKepribadian) {
+            return redirect()->to('user/pertanyaan')->with('success', 'Jawaban berhasil dikirim. Hasil Kepribadian: ' . $hasilKepribadian);
+        } else {
+            return redirect()->to('user/pertanyaan')->with('error', 'Kepribadian tidak dapat ditentukan.');
+        }
     }
-
-    $emailService = \Config\Services::email();
-
-    // Konfigurasi email
-    $emailService->setTo($email);
-    $emailService->setFrom('admin@ahmadderi.my.id', 'Hasil jawaban anda'); // Sesuaikan dengan alamat email dan nama Anda
-    $emailService->setSubject($subject);
-    $emailService->setMessage($message);
-
-    // Kirim email
-    if ($emailService->send()) {
-        log_message('info', 'Email berhasil dikirim ke ' . $email);
-    } else {
-        log_message('error', 'Email gagal dikirim: ' . $emailService->printDebugger());
-    }
-}
-
-
+    
+    
+    
+    
 
     private function analisisForwardChaining($idPengguna)
 {
