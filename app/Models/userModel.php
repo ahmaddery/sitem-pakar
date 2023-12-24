@@ -10,6 +10,12 @@ class UserModel extends Model
     protected $primaryKey = 'id';
     protected $allowedFields = ['username', 'usia', 'gender', 'email', 'password', 'reset_token', 'token_created_at'];
 
+
+    
+
+
+
+
     public function getUserByEmail($email)
     {
         return $this->where('email', $email)->first();

@@ -73,3 +73,11 @@ $routes->get('/admin/jawaban', 'AdminJawaban::index');
 $routes->get('/admin/jawaban/(:num)', 'AdminJawaban::index/$1');
 $routes->get('/admin/jawaban/delete/(:num)', 'AdminJawaban::delete/$1');
 
+
+
+$routes->get('admin/send_email_page', 'Admin::sendEmailPage');
+$routes->post('admin/confirm_Email', 'Admin::confirmEmail');
+$routes->post('admin/sendEmail', 'Admin::sendEmail');
+
+
+//http://localhost:8080/admin/send_email_page
